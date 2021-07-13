@@ -1,0 +1,255 @@
+:root {
+    --tawny-brown: rgb(235, 221, 221);
+    --light-orange: #f3b896;
+    --dark-red: rgb(201, 57, 57);
+    --dark-green: #829768;
+    --red-orange: #ee724d;
+    --red-orange-hero-title: #f76d43;
+    --product-brown-color: #85736818;
+    --product-shadow: #99745f23;
+    --product-shadow-hover: #47382f23;
+    --navbar-shadow: #22222223;
+    --text-shadow: #3a473af8;
+    --dark-gray: rgb(37, 37, 37);
+}
+
+body {
+    background-color: var(--tawny-brown);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/*nav bar*/
+
+#header {
+    z-index: 1;
+    width: 100%;
+    background-color: var(--tawny-brown);
+    box-shadow: 0 1px 10px 3px var(--navbar-shadow);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.nav-bar {
+    width: 95%;
+    margin: 4vh auto 1vh auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo-title {
+    margin: 0 10px;
+    color: rgb(56, 56, 56);
+}
+
+.logo-img {
+    width: 60px;
+}
+
+#header-img {
+    width: 100%;
+    height: auto;
+}
+
+#links {
+    align-self: center;
+    justify-content: flex-end;
+}
+
+#links ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#links li {
+    margin-left: 15px;
+    list-style-type: none;
+}
+
+#links li a {
+    text-decoration: none;
+    color: var(--dark-red);
+}
+
+
+/*hero*/
+
+.hero {
+    background-image: url("../images/hero.jpg");
+    width: 95vw;
+    height: 100vh;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    margin-left: 4vw;
+    top: 57%;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 6vh;
+    color: #e99c84;
+    text-shadow: 2px 2px 3px black;
+}
+
+#hero-paragraph {
+    font-size: 2.3vh;
+    color: rgb(68, 40, 3);
+    text-shadow: 0.5px 0.5px 3px white;
+}
+
+#form {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#email,
+#submit {
+    height: 6vh;
+    border-style: none;
+    border-radius: 2px;
+    box-shadow: 0 0 2px 2px var(--navbar-shadow);
+}
+
+#email {
+    box-sizing: border-box;
+    width: 300px;
+    padding-left: 10px;
+    font-size: 2.3vh;
+}
+
+#submit {
+    font-size: 2.3vh;
+    width: 90px;
+    background-color: var(--dark-green);
+    color: white;
+}
+
+
+/*coffee introduction*/
+
+#about-us {
+    margin: 10rem 0 4rem 0;
+    text-align: center;
+}
+
+.introduction-container {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: auto;
+}
+
+.introduction-container article {
+    display: flex;
+}
+
+.introduction-image {
+    width: 58px;
+    align-self: center;
+}
+
+.introduction {
+    width: 100%;
+    margin: 0 2vw;
+    align-self: stretch;
+}
+
+.introduction h3 {
+    margin-bottom: -12px;
+    font-weight: bold;
+}
+
+.introduction-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+/*video*/
+
+.video-container {
+    width: 500px;
+    margin: auto;
+}
+
+
+/*coffee prices*/
+
+.coffee-prices {
+    display: flex;
+    margin: 20vh auto;
+    width: 65vw;
+    justify-content: center;
+}
+
+.coffee {
+    color: black;
+    display: flex;
+    border-radius: 3px;
+    background-color: var(--product-brown-color);
+    box-shadow: 0 0 2px 2px var(--product-shadow);
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 220px;
+    text-align: center;
+    margin: 0 40px 160px 40px;
+    padding: 20px 20px;
+}
+
+.coffee img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.coffee-beans-img {
+    width: 220px;
+}
+
+.coffee-description {
+    flex: 1;
+}
+
+.price-and-buy {
+    font-size: 0.95rem;
+}
+
+.buy-button {
+    font-weight: bold;
+    background-color: var(--red-orange);
+    opacity: 0.70;
+    border: none;
+    color: white;
+    width: 120px;
+    height: 35px;
+}
+
+.buy-button:hover {
+    opacity: 1;
+}
+
+.coffee:hover {
+    box-shadow: 0 0 4px 5px var(--product-shadow-hover);
+}
+
+
+/*media*/
+
+@media(max-width: 975px) {
+    .coffee-prices {
+        flex-wrap: wrap;
+    }
+}
