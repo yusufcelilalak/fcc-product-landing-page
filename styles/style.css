@@ -13,6 +13,10 @@
     --dark-gray: rgb(37, 37, 37);
 }
 
+html {
+    scroll-padding-top: 130px;
+}
+
 body {
     background-color: var(--tawny-brown);
     font-family: 'Noto Sans', sans-serif;
@@ -77,10 +81,14 @@ body {
     color: var(--dark-red);
 }
 
+#links li:hover {
+    font-weight: bold;
+}
+
 
 /*hero*/
 
-.hero {
+#hero {
     background-image: url("../images/hero.jpg");
     width: 95vw;
     height: 100vh;
@@ -93,26 +101,26 @@ body {
 }
 
 .hero-text {
-    margin-left: 4vw;
-    top: 57%;
+    text-align: center;
+    top: 33%;
     position: relative;
 }
 
 .hero-title {
     font-size: 6vh;
-    color: #e99c84;
-    text-shadow: 2px 2px 3px black;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 1px rgb(56, 56, 56);
 }
 
 #hero-paragraph {
-    font-size: 2.3vh;
-    color: rgb(68, 40, 3);
-    text-shadow: 0.5px 0.5px 3px white;
+    font-size: 2.5vh;
+    color: white;
+    text-shadow: 0.5px 0.5px 3px var(--text-shadow);
 }
 
 #form {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 #email,
@@ -133,7 +141,7 @@ body {
 #submit {
     font-size: 2.3vh;
     width: 90px;
-    background-color: var(--dark-green);
+    background-color: var(--red-orange-hero-title);
     color: white;
 }
 
@@ -163,11 +171,11 @@ body {
 
 .introduction {
     width: 100%;
-    margin: 0 2vw;
+    margin: 0 0 0 1.5rem;
     align-self: stretch;
 }
 
-.introduction h3 {
+.introduction-title {
     margin-bottom: -12px;
     font-weight: bold;
 }
@@ -182,17 +190,27 @@ body {
 
 .video-container {
     width: 500px;
-    margin: auto;
+    margin: 0 auto 20vh auto;
+}
+
+#how-make-coffee {
+    text-align: center;
+    margin: 15vh auto 5vh auto;
 }
 
 
 /*coffee prices*/
 
+#store {
+    text-align: center;
+}
+
 .coffee-prices {
     display: flex;
-    margin: 20vh auto;
-    width: 65vw;
+    margin: 5vh auto;
+    width: 90vw;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .coffee {
@@ -205,7 +223,7 @@ body {
     justify-content: flex-start;
     width: 220px;
     text-align: center;
-    margin: 0 40px 160px 40px;
+    margin: 0 3vw 16vh 3vw;
     padding: 20px 20px;
 }
 
@@ -250,6 +268,78 @@ body {
 
 @media(max-width: 975px) {
     .coffee-prices {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 650px) {
+    .hero-title {
+        font-size: 5vw;
+    }
+    #hero-paragraph {
+        font-size: 2.5vw;
+    }
+    #email,
+    #submit {
+        font-size: 2.5vw;
+    }
+    #email {
+        width: 45vw;
+    }
+    #submit {
+        width: 15vw;
+    }
+    .nav-bar {
+        flex-direction: column;
+    }
+    .logo {
+        align-self: center;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    #logo-title {
+        font-size: 3.6vw;
+    }
+    .logo-img {
+        width: 7vw;
+    }
+    #links {
+        align-self: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    #links ul {
+        margin: 1vh;
+        padding: 0;
+    }
+    #links li {
+        font-size: 2.7vw;
+        margin: 0 1.5vw;
+    }
+}
+
+@media(max-height: 300px) {
+    .hero-title {
+        font-size: 9vh;
+    }
+    #hero-paragraph {
+        font-size: 6vh;
+    }
+    header {
+        height: 23vh;
+    }
+    #links li {
+        font-size: 4.2vh;
+    }
+    #logo-title {
+        font-size: 4.5vh;
+    }
+    .logo-img {
+        height: 10vh;
+    }
+    #header-img {
+        height: 100%;
+        width: auto;
     }
 }
